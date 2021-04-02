@@ -3,7 +3,6 @@ const app = express();
 app.use(express.json())
 app.use(express.urlencoded());
 
-
 // Routes
 // login route
 app.post('/login',(_req: Request, res: Response)=>{
