@@ -52,7 +52,7 @@ app.post('/login', (req: Request, res: Response) => {
 
 // logout route
 app.post('/logout', (_req: Request, res: Response) => {
-  console.log('🚀 - logout'); // roberto
+  res.removeHeader('Authorization');
   res.status(200).json();
 });
 
