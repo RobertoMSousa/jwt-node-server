@@ -1,0 +1,141 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-04-03T16:32:52.529Z",
+  "__export_source": "insomnia.desktop.app:v2021.2.2",
+  "resources": [
+    {
+      "_id": "req_efa48621b60949139e5e579acf7cc487",
+      "parentId": "wrk_6f5ceb24be8640698f89a44f3b4edf23",
+      "modified": 1617401981524,
+      "created": 1617316551922,
+      "url": "http://localhost:3000/login",
+      "name": "loging",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\":\"john.doe@mail.com\",\n\t\"password\": \"12345\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_f62e489bb46a488991dc6e5afdc3388e"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1617316551922,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_6f5ceb24be8640698f89a44f3b4edf23",
+      "parentId": null,
+      "modified": 1617316306920,
+      "created": 1617316306920,
+      "name": "JWT Sample",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_063c7489613341c6aa9d818286ec2735",
+      "parentId": "wrk_6f5ceb24be8640698f89a44f3b4edf23",
+      "modified": 1617467332416,
+      "created": 1617316624612,
+      "url": "http://localhost:3000/logout",
+      "name": "logout",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaG4gRG9lIiwiYXZhdGFyIjoiaHR0cHM6Ly9zYW1wbGUuY29tL2ltYWdlXzEuanBnIiwiaWQiOjEsImlhdCI6MTYxNzQ2NzMwOCwiZXhwIjoxNjE3NDY5MTA4fQ.-mxngH61HFJa3dBkeFlq9zJ_wOj1rmr2fPRExuPKRVLJsn1-6t6qy0MmKzwvWBOVmFUV64EnF7tLKpiVhsZsxg",
+          "description": "",
+          "id": "pair_15b3812ecbb149e698a0dc3e65c6e2ba"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1617316437984.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fe5186b01ac84f7f82a5e26ac8c0e6a9",
+      "parentId": "wrk_6f5ceb24be8640698f89a44f3b4edf23",
+      "modified": 1617467317248,
+      "created": 1617316324047,
+      "url": "http://localhost:3000/secret_page",
+      "name": "secrete_page",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaG4gRG9lIiwiYXZhdGFyIjoiaHR0cHM6Ly9zYW1wbGUuY29tL2ltYWdlXzEuanBnIiwiaWQiOjEsImlhdCI6MTYxNzQ2NzMwOCwiZXhwIjoxNjE3NDY5MTA4fQ.-mxngH61HFJa3dBkeFlq9zJ_wOj1rmr2fPRExuPKRVLJsn1-6t6qy0MmKzwvWBOVmFUV64EnF7tLKpiVhsZsxg",
+          "id": "pair_65df9089f1b149349349f585bfea375f"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1617316324047,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_9544431c3b64f8f3695199d14297c8a5fe25ab64",
+      "parentId": "wrk_6f5ceb24be8640698f89a44f3b4edf23",
+      "modified": 1617316307104,
+      "created": 1617316307104,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1617316307104,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_9544431c3b64f8f3695199d14297c8a5fe25ab64",
+      "parentId": "wrk_6f5ceb24be8640698f89a44f3b4edf23",
+      "modified": 1617316307107,
+      "created": 1617316307107,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_158d9e89154748eba8753e9d7f7256ae",
+      "parentId": "wrk_6f5ceb24be8640698f89a44f3b4edf23",
+      "modified": 1617316306928,
+      "created": 1617316306928,
+      "fileName": "JWT Sample",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
