@@ -1,4 +1,4 @@
-import express, { Response, Request } from 'express';
+import express, { Response, Request, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import { jwtExpiration, secret } from './config';
 
@@ -45,6 +45,7 @@ app.post('/login', (req: Request, res: Response) => {
     secret,
     { expiresIn: 60 * parseInt(jwtExpiration), algorithm: 'HS512' }
   );
+  
   res.setHeader('Authorization', `Bearer ${token}`);
   res.status(200).send();
 });
@@ -55,8 +56,25 @@ app.post('/logout', (_req: Request, res: Response) => {
   res.status(200).json();
 });
 
+
+// token validation middleware
+const valdidateToken = (req: Request, res: Response, next: NextFunction)=>{
+  try {
+    const token = req.headers['authorization']?.split(' ')[1]
+    if(!token){
+      res.status(401).json({err: 'not authorized'})
+      return;
+    }
+    jwt.verify(token, secret);
+    next();
+  } catch(err) {
+    res.status(401).json({err: 'not authorized'})
+    return;
+  }
+}
+
 // a secret page that can only be accessed when logged in.
-app.get('/secret_page', (_req: Request, res: Response) => {
+app.get('/secret_page', valdidateToken,  (_req: Request, res: Response) => {
   res.status(200).json({ secret: 'my protected info' });
 });
 
